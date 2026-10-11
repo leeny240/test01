@@ -1,0 +1,403 @@
+/* Layout for the Add Subscription prototype. Values come from tokens.css; component looks come from components.css. */
+.proto {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  min-height: 100vh;
+  background: var(--color-bg-canvas);
+  color: var(--color-text-primary);
+}
+
+.proto h1,
+.proto h2,
+.proto h3,
+.proto p {
+  margin: 0;
+}
+
+.proto-subtle { color: var(--color-text-subtle); }
+.proto-muted { color: var(--color-text-muted); }
+.proto-faint { color: var(--color-text-faint); }
+.proto-strong { color: var(--color-text-primary); font-weight: var(--font-weight-semibold); }
+.proto-muted-icon { color: var(--color-icon-muted); }
+
+/* ---------- Sidebar ---------- */
+.proto-sidebar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: var(--space-10) var(--space-10) var(--space-14);
+  border-right: 1px solid var(--color-border-default);
+  background: var(--color-bg-surface);
+}
+
+.proto-workspace {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  height: 39px;
+  padding: 0 var(--space-8);
+  border: 0;
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-surface-muted);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  text-align: left;
+  cursor: pointer;
+}
+
+.proto-workspace__text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.proto-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: 17px;
+}
+
+.proto-privacy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  margin-top: auto;
+  padding: var(--space-8) var(--space-8) var(--space-12);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-card);
+  text-align: center;
+}
+
+.proto-privacy__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  width: 100%;
+  height: 58px;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-surface-subtle);
+  color: var(--color-text-secondary);
+}
+
+/* ---------- Top bar ---------- */
+.proto-main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.proto-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-8);
+  height: 51px;
+  padding: 0 var(--space-14);
+  border-bottom: 1px solid var(--color-border-default);
+  background: var(--color-bg-surface);
+}
+
+.proto-appbar-brand,
+.proto-search-button {
+  display: none;
+}
+
+.proto-search {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  width: 311px;
+  height: 28px;
+  padding: 0 var(--space-10);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-surface-subtle);
+  color: var(--color-icon-muted);
+}
+
+.proto-search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--color-text-primary);
+}
+
+.proto-search kbd {
+  font-family: var(--font-sans);
+  color: var(--color-text-subtle);
+}
+
+/* ---------- Content ---------- */
+.proto-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-14);
+  padding: var(--space-14) var(--space-16) var(--space-24);
+}
+
+.proto-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-16);
+}
+
+.proto-header h1 {
+  margin: 2px 0;
+  letter-spacing: -0.01em;
+}
+
+.proto-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.proto-grid {
+  display: grid;
+  grid-template-columns: 234px minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-14);
+}
+
+.proto-side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.proto-card {
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-card);
+  background: var(--color-bg-surface);
+}
+
+.proto-card--upload {
+  padding: var(--space-8);
+}
+
+.proto-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-10);
+  padding: var(--space-10) var(--space-14);
+  border-bottom: 1px solid var(--color-border-divider);
+}
+
+.proto-inline {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.proto-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-8);
+}
+
+/* ---------- Review card ---------- */
+.proto-review__header {
+  justify-content: flex-start;
+  padding: var(--space-12) var(--space-14);
+}
+
+.proto-review__title {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.proto-review__name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.proto-review__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-14);
+  padding: var(--space-14);
+}
+
+.proto-fields {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-8);
+}
+
+.proto-panels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-12);
+}
+
+.proto-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  padding: var(--space-12);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-panel);
+}
+
+.proto-panel__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.proto-panel__header .toggle {
+  margin-left: auto;
+}
+
+.proto-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+}
+
+.proto-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-6);
+}
+
+.proto-decisions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: var(--space-10);
+  padding: var(--space-12) var(--space-14) var(--space-14);
+}
+
+/* ---------- Toast & helper link ---------- */
+.proto-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-10) var(--space-16);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-inverse);
+  color: var(--color-text-inverse);
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.proto-gallery-link {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  padding: var(--space-6) var(--space-12);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-surface);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+/* ---------- Mobile (tokens switch to the Mobile mode at the same breakpoint) ---------- */
+@media (max-width: 640px) {
+  .proto {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .proto-sidebar,
+  .proto-search,
+  .proto-header__actions .chip {
+    display: none;
+  }
+
+  .proto-topbar {
+    justify-content: flex-start;
+    height: auto;
+    padding: var(--space-12) var(--space-16);
+    border-bottom: 0;
+    background: transparent;
+  }
+
+  .proto-appbar-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-10);
+    margin-right: auto;
+  }
+
+  .proto-search-button {
+    display: grid;
+  }
+
+  .proto-content {
+    gap: var(--space-16);
+    padding: 0 var(--space-16) 120px;
+  }
+
+  .proto-header__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  .proto-grid,
+  .proto-panels {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .proto-fields {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-10);
+  }
+
+  .proto-fields__wide {
+    grid-column: 1 / -1;
+  }
+
+  .proto-panel {
+    padding: var(--space-16);
+    border-radius: var(--radius-card);
+  }
+
+  .proto-actions {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    padding: var(--space-12) var(--space-16) var(--space-24);
+    border-top: 1px solid var(--color-border-default);
+    background: var(--color-bg-surface);
+  }
+
+  .proto-actions .button--primary {
+    flex: 1;
+  }
+
+  .proto-decisions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .proto-toast {
+    bottom: 104px;
+  }
+
+  .proto-gallery-link {
+    bottom: 96px;
+  }
+}

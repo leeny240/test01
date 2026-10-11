@@ -1,4 +1,4 @@
-import { useId, type ButtonHTMLAttributes, type InputHTMLAttributes } from 'react'
+import { useId, type ButtonHTMLAttributes, type InputHTMLAttributes, type Ref } from 'react'
 import { Icon, type IconName } from './Icon'
 
 /** Forces a pseudo state for documentation (hover / pressed / focus). Real interaction works without it. */
@@ -43,16 +43,18 @@ export function IconButton({
   icon,
   label,
   previewState,
+  className = '',
   ...rest
 }: ButtonHTMLAttributes<HTMLButtonElement> & { icon: IconName; label: string; previewState?: PreviewState }) {
   return (
-    <button type="button" className="icon-button" aria-label={label} data-state={previewState} {...rest}>
+    <button type="button" className={`icon-button ${className}`} aria-label={label} data-state={previewState} {...rest}>
       <Icon name={icon} />
     </button>
   )
 }
 
 type InputFieldProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> & {
+  ref?: Ref<HTMLInputElement>
   label: string
   showLabel?: boolean
   error?: string
