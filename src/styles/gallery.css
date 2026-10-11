@@ -1,0 +1,236 @@
+/* Documentation layout for the component gallery (not part of the component library). */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg-canvas);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.gallery {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.gallery[data-mode='mobile'] {
+  max-width: 430px;
+}
+
+.gallery-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.gallery-eyebrow {
+  color: var(--color-text-accent);
+  font-size: 13px;
+  font-weight: var(--font-weight-semibold);
+}
+
+.gallery-header h1 {
+  margin-top: 4px;
+  font-size: 32px;
+  letter-spacing: -0.02em;
+}
+
+.gallery-sub {
+  margin-top: 6px;
+  color: var(--color-text-subtle);
+  font-size: 14px;
+}
+
+.gallery-mode {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 12px;
+  background: var(--color-bg-surface-muted);
+}
+
+.gallery-mode button {
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--color-text-subtle);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.gallery-mode button[aria-checked='true'] {
+  background: var(--color-bg-surface);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.gallery-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 56px;
+}
+
+.gallery-section h2 {
+  font-size: 24px;
+  letter-spacing: -0.01em;
+}
+
+.gallery-section header p {
+  margin-top: 4px;
+  color: var(--color-text-subtle);
+  font-size: 13px;
+}
+
+.gallery-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+  border: 1px solid var(--color-border-default);
+  border-radius: 16px;
+  background: var(--color-bg-surface);
+  min-width: 0;
+}
+
+.gallery-panel h3 {
+  font-size: 14px;
+}
+
+.gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.gallery-row--top {
+  align-items: flex-start;
+}
+
+.gallery-row--top > * {
+  flex: 1 1 180px;
+}
+
+.gallery-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.gallery-grid--fields {
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+
+.gallery-grid--widgets {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.gallery-labeled {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gallery-labeled > span:first-child,
+.state-matrix__head {
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: var(--font-weight-semibold);
+}
+
+.gallery-note {
+  color: var(--color-text-subtle);
+  font-size: 13px;
+}
+
+.state-matrix {
+  display: grid;
+  align-items: center;
+  gap: 12px 8px;
+  overflow-x: auto;
+}
+
+.state-matrix__row {
+  display: contents;
+}
+
+.state-matrix__label {
+  color: var(--color-text-subtle);
+  font-size: 12px;
+}
+
+.gallery[data-mode='mobile'] .state-matrix {
+  grid-template-columns: 1fr !important;
+}
+
+.gallery[data-mode='mobile'] .state-matrix__head,
+.gallery[data-mode='mobile'] .state-matrix > span:first-child {
+  display: none;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: 12px;
+}
+
+.icon-grid__cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 8px;
+  border-radius: 12px;
+  background: var(--color-bg-surface);
+  color: var(--color-icon-default);
+}
+
+.icon-grid__cell .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-grid__cell span {
+  color: var(--color-text-subtle);
+  font-size: 11px;
+}
+
+.gallery-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 220px;
+}
