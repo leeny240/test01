@@ -42,6 +42,12 @@ npm run build      # regenerates tokens.css, type-checks, builds
 npm run tokens     # only regenerate tokens.css
 ```
 
+## Live prototype
+
+Every push to `main` builds the app and publishes it to GitHub Pages via `.github/workflows/deploy.yml`:
+<https://leeny240.github.io/test01/> (component gallery: `#components`).
+One-time setup: **Settings → Pages → Source → GitHub Actions**.
+
 ## Syncing from Figma
 
 Variables changed in Figma? Ask Claude to **"sync tokens"**: it re-exports the Figma variables into
