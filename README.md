@@ -15,7 +15,8 @@ Figma variables & text styles ──export──▶ tokens/tokens.json ──npm
 | `scripts/build-tokens.mjs` | Converts `tokens.json` into CSS custom properties. Names match the WEB code syntax on each Figma variable (e.g. `color/button/primary/bg` → `--color-button-primary-bg`). |
 | `src/styles/tokens.css` | Generated — do not edit. Desktop values on `:root`; mobile values under `[data-mode="mobile"]` and `@media (max-width: 640px)`. Text styles become `.text-*` classes. |
 | `src/components/` | React components mirroring the Figma Components page (same names and variants). Styles in `components.css` use tokens only. |
-| `src/App.tsx` | Component gallery with a Desktop / Mobile mode switch (`?mode=mobile` also works). |
+| `src/prototype/` | Interactive **Add Subscription · First Decision** prototype composed from the components (default route). Under 640px it switches to the mobile layout and token mode. |
+| `src/Gallery.tsx` | Component gallery at `#components`, with a Desktop / Mobile mode switch (`?mode=mobile#components` also works). |
 
 ## Components
 
